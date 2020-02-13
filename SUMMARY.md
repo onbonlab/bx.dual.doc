@@ -4,7 +4,7 @@
 
 * C++ demo
 
-  [windows平台](./bx.dual.demo.cplus/README.md)
+  [windows平台](https://github.com/onbonlab/bx.dual.linux.cplus)
 
   [linux平台](./bx.dual.linux.cplus/README.md)
 
