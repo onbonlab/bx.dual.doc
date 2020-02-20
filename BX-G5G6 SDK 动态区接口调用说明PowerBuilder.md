@@ -12,7 +12,7 @@
 
 ### 5代卡的动态区使用步骤
 
-#### 5代卡动态区接口
+#### 5代卡动态区接口介绍
 
 1. 发送一条文本信息到指定的动态区
 
@@ -30,25 +30,34 @@
 
 
 
-#### 动态区调用步骤
+#### 动态区接口调用步骤
 
 以 发送一条文本信息到指定的动态区 为例：
 
 ##### 步骤：
 
-###### 0.初始化SDK库：linux下不需要此步骤；windows平台需要；只需要初始化一次;
-
-1.声明PB格式的函数及数据结构
+###### 0.初始化SDK库：只需要初始化一次;
 
 ###### 1.声明PB格式的函数及数据结构；
 
 ###### 2.调用函数：bxDual_dynamicArea_AddAreaWithTxt_point_5G；
 
-###### 3.释放SDK库：与初始化SDK库一一对应；linux下不需要；
+###### 3.释放SDK库：与初始化SDK库一一对应；
 
 
 
 ##### 代码示例：
+
+###### 初始化SDK库：只需要初始化一次;
+
+```
+/*初始化SDK库：linux平台不需要此步骤；windows平台需要；只需要初始化一次；*/
+integer nInit = bxDual_InitSdk(); //返回0成功；-1失败；
+```
+
+
+
+###### 声明PB格式的函数及数据结构
 
 - 函数声明
 
@@ -59,7 +68,7 @@ Function long bxDual_dynamicArea_AddAreaWithTxt_point_5G(string pIP, unsignedlon
 
 
 
-- 边框数据结构定义格式及赋值
+- 数据结构定义格式及赋值
 
   ```
   global type dp_eqareaframeheader from structure
@@ -76,7 +85,7 @@ Function long bxDual_dynamicArea_AddAreaWithTxt_point_5G(string pIP, unsignedlon
 
 
 
-- 调用动态区接口函数
+###### 调用动态区接口函数
 
 ```c++
 
@@ -87,5 +96,12 @@ Function long bxDual_dynamicArea_AddAreaWithTxt_point_5G(string pIP, unsignedlon
 //函数调用
 ll_error = bxDual_dynamicArea_AddAreaWithTxt_point_5G(ls_ip, ll_port,1,0,0,9,1,0, 0  ,1,0, 0, 96,48, idp_eqareaframeheader,3,0,9,9,0,idp_eqfontdata,ls_fontName,ls_string1)
 
+```
+
+###### 释放SDK库：与初始化SDK库一一对应；
+
+```
+/*释放SDK库：与初始化SDK库一一对应；linux下不需要*/
+bxDual_ReleaseSdk();
 ```
 
