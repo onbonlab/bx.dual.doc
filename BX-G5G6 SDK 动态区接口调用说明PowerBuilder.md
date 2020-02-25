@@ -81,7 +81,7 @@ Function long bxDual_dynamicArea_AddAreaWithTxt_point_5G(string pIP, unsignedlon
   end type
   ```
 
-![](K:\onbongit\bx.dual\bx.dual.doc\PB语言_动态区边框数据结构赋值.png)
+![](.\PB语言_动态区边框数据结构赋值.png)
 
 
 
